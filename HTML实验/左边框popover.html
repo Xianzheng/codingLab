@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--
+          为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，
+          需要在网页的 head 之中添加 viewport meta 标签,一般将bootstrap的css和js文件放进来的时候会自动生成
+          -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+  <!--width=device-width 表示宽度是设备屏幕的宽度。
+              initial-scale=1.0 表示初始的缩放比例。
+              shrink-to-fit=no 自动适应手机屏幕的宽度。这里的shrink-to-fit=no"是我自己加进去的-->
+  <title>左边框</title>
+
+  <style>
+    /* 自定义popover包裹容器 */
+    .define-popover {
+      border-radius: 0px;
+      border: 0px;
+    }
+
+    /* 自定义popover 内容区 */
+    .define-popover-body {
+      background: #F60;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 0px;
+    }
+
+    /* 自定义popover 标题 */
+    .define-popover-title {
+      font-size: 12px;
+      background: #000;
+      color: #fff;
+      border-bottom: 0px;
+      /* 隐藏标题下方的分割线 */
+      border-radius: 0px;
+    }
+
+    /* 自定义tooltip四个不同方向箭头样式 */
+    /* top */
+    .popover.bs-popover-top .define-popover-arrow::after {
+      border-top-color: #369;
+      /* 箭头填充色 */
+    }
+
+    /* bottom */
+    .popover.bs-popover-bottom .define-popover-arrow::after {
+      border-bottom-color: #369;
+      /* 箭头填充色 */
+    }
+
+    .bs-popover-bottom .popover-header::before,
+    .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
+      border-bottom: 0px;
+    }
+
+    /* left */
+    .popover.bs-popover-left .define-popover-arrow::after {
+      border-left-color: #369;
+      /* 箭头填充色 */
+    }
+
+    /* right */
+    .popover.bs-popover-right .define-popover-arrow::after {
+      border-right-color: #369;
+      /* 箭头填充色 */
+    }
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+
+    .dropdown>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }
+
+    .dropdown-menu{
+      width: 10px;
+    }
+  </style>
+
+  <link href="./bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"
+    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+
+  <a href="#" id="hoverIt" rel="popover" title="这是标题" data-content="这是正文本内容" data-placement="right">改变弹出框样式</a>
+
+  <div class="dropdown">
+    <button
+      class="btn btn-primary dropleft-toggle"
+      type="button"
+      id="dropleftMenuButton"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div> 
+  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right"
+    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." close-delay=10000>
+    Popover on right
+  </button>
+
+
+  
+
+
+    <script src="./js_lib/jquery-3.6.4.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js_lib/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+
+    
+
+
+
+</body>
+
+</html>
