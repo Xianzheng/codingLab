@@ -12,11 +12,13 @@
         html,body{
         height:100%;
         }
+        
+ 
         .flexControl{
             height: 100%;
             display: flex;
             background-color: lightcoral;
-            justify-content: end;
+            justify-content: center;
 
         }
         .gridControl {
@@ -24,24 +26,107 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         .div1{
+            display: grid;
+            grid-template-columns: 1fr;
             background-color: aqua;
-            width: 100px;
-            height: 100px;
-            margin-right: 50px;
+            width: 333.82px;
+            height:287px;
+            margin-left: 80px;
+            margin-bottom: 80px;
         }
+        
+
+        @media(max-width: 1549px) {
+            .gridControl {
+               
+               grid-template-columns: 1fr 1fr 1fr;
+               column-gap: 20px;
+            }
+
+
+        }
+
+        
+
+        @media(max-width: 700px) {
+            
+
+            .gridControl {
+                
+                grid-template-columns: 1fr;
+              row-gap: 100px;
+            }
+
+            
+    }
 
     </style>
 </head>
-<body>
+<body id = "BOX">
+    <svg  enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path></svg>
+`   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+  </svg>
     <div class="flexControl">
         <div class ="gridControl">
-            <div class="div1"></div>
-            <div class="div1"></div>
-            <div class="div1"></div>
-            <div class="div1"></div>
-            
+            <div class="div1">
+                <div class ="tumbnail">
+                    <image width="100%" src="hq720.webp"/>
+                </div>
+                <div class = "video-info">
 
+                </div>
+            </div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path></svg>
     </div>
+    <script>
+
+        window.onload=function(){
+            document.body.style.height = '100%'
+            document.body.style.height = document.body.scrollHeight.toString() + 'px'
+        }
+        window.onresize=function(){  
+            //console.log('width is',document.body.clientWidth);
+            // // console.log('height is',document.body.clientHeight);
+            document.body.style.height = '100%'
+            document.body.style.height = document.body.scrollHeight.toString() + 'px'
+            // console.log("document.documentElement.scrollHeight",document.body.scrollHeight)
+            
+        } 
+        window.onscroll=function() {
+            //console.log('width is',document.body.clientWidth);
+            // console.log('height is',document.body.clientHeight);
+        }
+
+        // var box = document.getElementById("BOX")
+
+        // box.onmousewheel= getMousePos
+        
+
+        // function getMousePos(event) {
+        //     var e = event || window.event;
+        //     var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+        //     var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+        //     var x = e.pageX || e.clientX + scrollX;
+        //     var y = e.pageY || e.clientY + scrollY;
+        //     console.log({ "x": x, "y": y });
+        //     console.log()
+        //     console.log("document.documentElement.scrollHeight",document.documentElement.scrollHeight)
+        //     console.log("document.documentElement.scrollHeight",document.documentElement.s)
+        //     var e = event || window.event;
+        //     console.log({ "x": e.screenX, "y": e.screenY });
+        // }
+
+       
+            
+    </script>
 </body>
 </html>
