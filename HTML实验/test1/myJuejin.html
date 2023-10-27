@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin:0;
+        padding:0;
+        }
+        html,body{
+        height:100%;
+        }
+        .header{
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            border: 1px solid;
+            margin-bottom:20px;
+        }
+        .frame{
+            display:grid;
+            grid-template-columns: 0.5fr 1.8fr 1fr;
+            column-gap: 20px;
+        }
+        .box{
+            border: 1px solid;
+            height: 1000px;
+        }
+        .info-header{
+           display:flex;
+           align-items:flex-start;
+           height: 80px;
+           border: 1px solid;
+
+        }
+
+        .header-text{
+
+            bottom:0px;
+            color:rgb(81, 87, 103);
+            content:"";
+            cursor:pointer;
+        
+            font-family:-apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
+            font-size:14.004px;
+            height:60px;
+            left:0px;
+            line-height:60px;
+            list-style-image:none;
+            list-style-position:outside;
+            list-style-type:none;
+        /* position:absolute;
+            right:0px;
+            text-align:left;
+            text-rendering:optimizelegibility;
+            top:0px;
+            width:52px;
+            word-break:break-word;
+            -webkit-font-smoothing:auto; */
+            
+        }
+
+        .info-header-text{
+            font-family: Arial;
+            color:rgb(37, 41, 51);
+            font-size:32.004px;
+            font-weight:600;
+            height:41.9167px;
+            
+        }
+
+        .info-header-notebox{
+            display: flex;
+            justify-content: start;
+        }
+
+        .info-header-note{
+            font-family: Arial;
+            color:rgb(81, 87, 103);
+            cursor:pointer;
+            font-size:14px;
+            font-weight:500;
+            height:24px;
+            line-height:24px;
+            margin-right: 10px;
+        }
+
+        .info-header-noteDate{
+            color: rgb(138, 145, 159);
+            font-family: Arial;
+            cursor:pointer;
+            font-size:14px;
+            font-weight:500;
+            height:24px;
+            line-height:24px;
+            margin-right: 10px;
+
+        }
+
+        .read-icon{
+            color :rgb(138, 145, 159);
+            font-family: Arial;
+            display: inline;
+            font-size:14px;
+            height:auto;
+            line-height:22px;
+            stroke:rgb(138, 145, 159);
+            text-rendering:optimizelegibility;
+            text-size-adjust:100%;
+            transform-origin:0px 0px;
+            width:auto;
+            word-break:break-word;
+
+
+        }
+
+        .info-subheader{
+            color:rgb(37, 41, 51);
+            display:block;
+            font-family:-apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
+            font-size:24px;
+            font-weight:700;
+            height:38px;
+            line-height:38px;
+            margin-block-end:5px;
+            margin-block-start:35px;
+
+        }
+
+        .info-subheader1{
+
+            border-bottom-color:rgb(236, 236, 236);
+            border-bottom-style:solid;
+            border-bottom-width:0.666667px;
+            color:rgb(37, 41, 51);
+            display:block;
+            font-family:-apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
+            font-size:22px;
+            font-weight:700;
+            height:34px;
+            line-height:34px;
+            margin-block-end:10px;
+            margin-block-start:35px;
+            margin-bottom:10px;
+            margin-inline-end:0px;
+            margin-inline-start:0px;
+            margin-top:35px;
+            padding-bottom:12px;
+            text-rendering:optimizelegibility;
+            text-size-adjust:100%;
+            width:755.938px;
+            word-break:break-word;
+            -webkit-font-smoothing:auto;
+        }
+
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div class = "header">
+        <div class="header-text">首页</div>
+        <div class="header-text">沸点</div>
+        <div class="header-text">课程</div>
+        <div  class="header-text">直播</div>
+
+    </div>
+    <div class ='frame'>
+
+        <div class="box"></div>
+        <div class="box">
+            <div class="info-header">
+                <p class="info-header-text">好玩的 CSS - 40 个有趣的 CSS 网站</p>
+                
+            </div>
+            <div class="info-header-notebox">
+                <p class="info-header-note">snoopylion</p>
+                <p class="info-header-noteDate">2021-07-07 21:37</p>
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="read-icon" data-v-6e9670c1=""><path d="M7.90078 2.80078C4.49278 2.80078 1.74745 6.11672 0.800781 7.77469C1.74745 9.58339 4.49278 13.2008 7.90078 13.2008C11.3088 13.2008 14.0541 9.58339 15.0008 7.77469C14.0541 6.11672 11.3088 2.80078 7.90078 2.80078Z" stroke="currentColor" data-v-6e9670c1=""></path><circle cx="7.89922" cy="8.00078" r="2.2" stroke="currentColor" data-v-6e9670c1=""></circle></svg>
+                <p class="info-header-note">45370</p>
+            </div>
+
+            <p class = 'info-subheader'>🔖 好玩的 CSS - 40 个有趣的 CSS 网站</p>
+            <p class = 'info-subheader1'>🌐 基础学习</p>
+            <div class="info-content"></div>
+            <div class="info-footer"></div>
+        </div>
+        <div class="box"></div>
+    </div>
+    <script>
+        window.onload=function(){
+            document.body.style.height = '100%'
+            document.body.style.height = document.body.scrollHeight.toString() + 'px'
+
+            
+            document.body.style.width = '100%'
+            document.body.width = document.body.scrollWidth.toString() + 'px'
+            console.log('width is',document.body.scrollWidth)
+        }
+        window.onresize=function(){  
+            //console.log('width is',document.body.clientWidth);
+            // // console.log('height is',document.body.clientHeight);
+            document.body.style.height = '100%'
+            document.body.style.height = document.body.scrollHeight.toString() + 'px'
+            // console.log("document.documentElement.scrollHeight",document.body.scrollHeight)
+            
+        } 
+    </script>
+</body>
+</html>
